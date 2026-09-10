@@ -1,124 +1,145 @@
-// Devendra Singh - Portfolio JavaScript
+// ===============================
+// MOBILE MENU
+// ===============================
 
-document.addEventListener('DOMContentLoaded', () => {
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-    // --- 1. Typewriter Effect ---
-    const typewriterElement = document.getElementById('typewriter-text');
-    const roles = [
-        "Software Developer",
-        "B.Tech CSE Student",
-        "Java & C++ Enthusiast",
-        "Problem Solver"
-    ];
-
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseDelay = 1500;
-
-    function typeEffect() {
-        if (!typewriterElement) return;
-
-        const currentRole = roles[roleIndex];
-
-        if (isDeleting) {
-            typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let speed = isDeleting ? deletingSpeed : typingSpeed;
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            speed = pauseDelay;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            speed = 300;
-        }
-
-        setTimeout(typeEffect, speed);
-    }
-
-    typeEffect();
-
-
-    // --- 2. Mobile Hamburger Menu Toggle ---
-    const hamburger = document.getElementById('hamburger-btn');
-    const navLinks = document.getElementById('nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
-
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('open');
-        });
-
-        // Close menu when a navigation link is clicked
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('open');
-            }
-        });
-    }
-
-
-    // --- 3. Scroll to Top Floating Button ---
-    const scrollTopBtn = document.getElementById('scroll-top-btn');
-
-    if (scrollTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 350) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-
-    // --- 4. Active Navigation Link on Scroll ---
-    const sections = document.querySelectorAll('section[id]');
-
-    function highlightNavOnScroll() {
-        const scrollY = window.scrollY;
-
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 120;
-            const sectionId = current.getAttribute('id');
-            const correspondingNavLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
-
-            if (correspondingNavLink) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    correspondingNavLink.classList.add('active');
-                } else {
-                    correspondingNavLink.classList.remove('active');
-                }
-            }
-        });
-    }
-
-    window.addEventListener('scroll', highlightNavOnScroll);
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
+
+
+// Close mobile menu after clicking a link
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+
+// ===============================
+// SCROLL REVEAL ANIMATION
+// ===============================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.12
+  }
+);
+
+revealElements.forEach((element) => {
+  revealObserver.observe(element);
+});
+
+
+// ===============================
+// CERTIFICATE IMAGE MODAL
+// ===============================
+
+const certModal = document.getElementById("certModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll(".cert-image-btn").forEach((button) => {
+
+  button.addEventListener("click", (event) => {
+
+    // Prevent opening modal for PDF link
+    if (button.tagName === "A") {
+      return;
+    }
+
+    const image = button.getAttribute("data-image");
+    const title = button.getAttribute("data-title");
+
+    modalImage.src = image;
+    modalImage.alt = title;
+    modalTitle.textContent = title;
+
+    certModal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+  });
+
+});
+
+
+// Close modal
+
+modalClose.addEventListener("click", closeModal);
+
+
+// Close modal when clicking outside image
+
+certModal.addEventListener("click", (event) => {
+
+  if (event.target === certModal) {
+    closeModal();
+  }
+
+});
+
+
+// Close modal function
+
+function closeModal() {
+
+  certModal.classList.remove("active");
+
+  document.body.style.overflow = "";
+
+  modalImage.src = "";
+}
+
+
+// ===============================
+// BACK TO TOP BUTTON
+// ===============================
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 500) {
+    topBtn.classList.add("show");
+  } else {
+    topBtn.classList.remove("show");
+  }
+
+});
+
+
+// Scroll to top
+
+topBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
+
+
+// ===============================
+// CURRENT YEAR
+// ===============================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
