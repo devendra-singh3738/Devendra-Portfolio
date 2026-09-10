@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Devendra Singh | Software Developer</title>
+    <title>Devendra Singh | Software Developer Portfolio</title>
 
+    <!-- FontAwesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,43 +18,91 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">Devendra Singh</div>
+            <a href="#home" class="logo">Devendra Singh</a>
 
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#coding">Coding Profiles</a></li>
+                <li><a href="#certifications">Certificates</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="resume.pdf" target="_blank" download class="nav-resume-btn">
+                        <i class="fa-solid fa-file-arrow-down"></i> Resume
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
 
-    <!-- Home Section -->
+    <!-- Home / Hero Section -->
     <section id="home" class="hero">
 
         <div class="hero-content">
 
-            <div class="profile-circle">
-                DS
+            <!-- Profile Image / Circle with fallback -->
+            <div class="profile-container">
+                <div class="profile-circle">
+                    <img 
+                        src="profile.jpg" 
+                        alt="Devendra Singh" 
+                        class="profile-img"
+                        onerror="this.style.display='none'; document.getElementById('initials-fallback').style.display='flex';"
+                    >
+                    <span class="profile-initials" id="initials-fallback">DS</span>
+                </div>
             </div>
 
             <p class="hello">Hello, I'm</p>
 
             <h1>Devendra Singh</h1>
 
-            <h2>Software Developer | B.Tech CSE Student</h2>
+            <!-- Dynamic Typewriter Subtitle -->
+            <h2 class="hero-subtitle">
+                <span id="typewriter-text"></span><span class="cursor">|</span>
+            </h2>
 
-            <p>
+            <p class="hero-description">
                 I am a Computer Science student passionate about
-                programming, web development and software development.
+                programming, building scalable web applications, and solving complex problems.
             </p>
 
             <div class="buttons">
-                <a href="#projects" class="btn">View My Projects</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+                <a href="#projects" class="btn">
+                    <i class="fa-solid fa-briefcase"></i> View Projects
+                </a>
+                <a href="resume.pdf" target="_blank" download class="btn resume-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn secondary">
+                    <i class="fa-regular fa-paper-plane"></i> Contact Me
+                </a>
+            </div>
+
+            <!-- Social Links Quick Bar -->
+            <div class="hero-socials">
+                <a href="https://github.com/Dev1234484" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:devendrasinghthakur3738@gmail.com" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+918103002844" title="Phone">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
             </div>
 
         </div>
@@ -66,20 +118,21 @@
         <div class="about-box">
 
             <p>
-                My name is Devendra Singh. I am currently pursuing
-                B.Tech in Computer Science and Engineering at
-                Lovely Professional University.
+                My name is <strong>Devendra Singh</strong>. I am currently pursuing
+                <strong>B.Tech in Computer Science and Engineering</strong> at
+                <strong>Lovely Professional University</strong>.
             </p>
 
             <p>
-                I have completed my Diploma in Computer Science and
-                Engineering from Dr. C.V. Raman University.
+                I completed my <strong>Diploma in Computer Science and Engineering</strong> from
+                <strong>Dr. C.V. Raman University</strong>, where I built a strong foundation in
+                algorithms, database design, and software principles.
             </p>
 
             <p>
-                I enjoy learning programming, developing projects and
-                solving technical problems. My goal is to become a
-                skilled Software Developer.
+                I enjoy learning programming languages, developing practical software projects, and
+                solving technical problems through clean, efficient code. My goal is to work as a
+                skilled <strong>Software Developer</strong> and contribute to impactful tech products.
             </p>
 
         </div>
@@ -95,30 +148,41 @@
         <div class="skills-container">
 
             <div class="skill-card">
-                <h3>Programming</h3>
-                <p>C++</p>
-                <p>Java</p>
+                <h3><i class="fa-solid fa-code"></i> Programming</h3>
+                <div class="badges-wrapper">
+                    <span class="badge"><i class="fa-solid fa-file-code"></i> C++</span>
+                    <span class="badge"><i class="fa-brands fa-java"></i> Java</span>
+                </div>
             </div>
 
             <div class="skill-card">
-                <h3>Web Development</h3>
-                <p>HTML</p>
-                <p>CSS</p>
+                <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+                <div class="badges-wrapper">
+                    <span class="badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span class="badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="badge"><i class="fa-brands fa-php"></i> PHP</span>
+                </div>
             </div>
 
             <div class="skill-card">
-                <h3>Database & Tools</h3>
-                <p>MySQL</p>
-                <p>Git & GitHub</p>
-                <p>VS Code</p>
+                <h3><i class="fa-solid fa-database"></i> Database & Tools</h3>
+                <div class="badges-wrapper">
+                    <span class="badge"><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                    <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                    <span class="badge"><i class="fa-solid fa-laptop-code"></i> VS Code</span>
+                </div>
             </div>
 
             <div class="skill-card">
-                <h3>Soft Skills</h3>
-                <p>Problem Solving</p>
-                <p>Team Player</p>
-                <p>Quick Learner</p>
-                <p>Communication</p>
+                <h3><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+                <div class="badges-wrapper">
+                    <span class="badge"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</span>
+                    <span class="badge"><i class="fa-solid fa-users"></i> Team Player</span>
+                    <span class="badge"><i class="fa-solid fa-bolt"></i> Quick Learner</span>
+                    <span class="badge"><i class="fa-solid fa-comments"></i> Communication</span>
+                </div>
             </div>
 
         </div>
@@ -129,7 +193,7 @@
     <!-- Projects -->
     <section id="projects" class="section">
 
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
 
         <div class="projects-container">
 
@@ -139,17 +203,23 @@
                 <h3>AI Interview</h3>
 
                 <p>
-                    A full-stack interview platform designed for
-                    candidates and recruiters. It includes interview
-                    scheduling, session handling and AI-based evaluation.
+                    A comprehensive full-stack interview platform designed for
+                    candidates and recruiters. Features automated scheduling, interactive
+                    session management, and AI-driven performance evaluation.
                 </p>
 
-                <p><strong>Technology:</strong> Full Stack, OpenAI API</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Full Stack</span>
+                    <span class="tech-badge">OpenAI API</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
 
-                <a href="https://github.com/abansal2507/Ai-Interview.git"
-                   target="_blank">
-                    View on GitHub
-                </a>
+                <div class="project-actions">
+                    <a href="https://github.com/abansal2507/Ai-Interview.git"
+                       target="_blank" class="project-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
 
             </div>
 
@@ -160,16 +230,23 @@
                 <h3>Optic World</h3>
 
                 <p>
-                    A responsive booking and product catalog website
-                    with product information and customer feedback.
+                    A responsive product catalog and booking platform designed for eyewear.
+                    Includes dynamic product listings, detailed specifications, and customer feedback collection.
                 </p>
 
-                <p><strong>Technology:</strong> PHP, HTML, CSS</p>
+                <div class="project-tech">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">MySQL</span>
+                </div>
 
-                <a href="https://github.com/BalmukandSharmaa/Furniture-Website.git"
-                   target="_blank">
-                    View on GitHub
-                </a>
+                <div class="project-actions">
+                    <a href="https://github.com/BalmukandSharmaa/Furniture-Website.git"
+                       target="_blank" class="project-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
 
             </div>
 
@@ -180,15 +257,18 @@
                 <h3>Hostel Management System</h3>
 
                 <p>
-                    A diploma project developed to manage hostel
-                    records using Admin and Warden modules.
+                    A full-featured management system developed to streamline hostel administration.
+                    Implements role-based access for Admin and Warden with room allotment and student tracking.
                 </p>
 
-                <p><strong>Technology:</strong> MySQL, bcrypt</p>
+                <div class="project-tech">
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">bcrypt</span>
+                    <span class="tech-badge">Security</span>
+                </div>
 
-                <p>
-                    The system provides secure authentication and
-                    database management.
+                <p class="project-highlight">
+                    Provides secure authentication and optimized relational schema.
                 </p>
 
             </div>
@@ -200,12 +280,118 @@
                 <h3>Calculator Application</h3>
 
                 <p>
-                    A simple calculator application developed using
-                    Java. It performs basic arithmetic operations.
+                    A desktop calculator application with a clean graphical user interface.
+                    Handles standard arithmetic calculations with precision and keyboard input support.
                 </p>
 
-                <p><strong>Technology:</strong> Java</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">OOP</span>
+                    <span class="tech-badge">GUI</span>
+                </div>
 
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Coding Profiles & Achievements -->
+    <section id="coding" class="section">
+
+        <h2 class="section-title">Coding Profiles & Problem Solving</h2>
+
+        <div class="coding-container">
+
+            <div class="coding-card">
+                <div class="coding-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>LeetCode</h3>
+                <p>Practicing Data Structures, Algorithms, and competitive problem solving in C++ & Java.</p>
+                <div class="coding-badge">DSA & Problem Solving</div>
+                <a href="https://leetcode.com/" target="_blank" class="coding-link">
+                    Visit LeetCode <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="coding-card">
+                <div class="coding-icon">
+                    <i class="fa-brands fa-hackerrank"></i>
+                </div>
+                <h3>HackerRank</h3>
+                <p>Practicing problem solving badges, Object-Oriented Programming, and algorithmic challenges.</p>
+                <div class="coding-badge">Problem Solving & Core Java</div>
+                <a href="https://www.hackerrank.com/" target="_blank" class="coding-link">
+                    Visit HackerRank <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="coding-card">
+                <div class="coding-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>GeeksforGeeks</h3>
+                <p>Mastering Computer Science fundamentals, DBMS, OS concepts, and coding interview topics.</p>
+                <div class="coding-badge">CS Fundamentals</div>
+                <a href="https://www.geeksforgeeks.org/" target="_blank" class="coding-link">
+                    Visit GeeksforGeeks <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+
+        <h2 class="section-title">Certifications & Courses</h2>
+
+        <div class="certifications-container">
+
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <h3>Java Programming</h3>
+                        <h4>Object-Oriented Programming & Data Structures</h4>
+                    </div>
+                </div>
+                <p>Comprehensive training in Java fundamentals, OOP concepts, collections framework, and application logic.</p>
+                <div class="cert-footer">
+                    <span class="cert-tag"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <h3>Web Development</h3>
+                        <h4>HTML5, CSS3 & Responsive Design</h4>
+                    </div>
+                </div>
+                <p>Hands-on experience in building modern, responsive, and cross-browser compatible web layouts.</p>
+                <div class="cert-footer">
+                    <span class="cert-tag"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                    <div>
+                        <h3>Database Management System</h3>
+                        <h4>SQL & Relational Architecture</h4>
+                    </div>
+                </div>
+                <p>Focused on relational database design, SQL querying, indexing, normalization, and secure transactions.</p>
+                <div class="cert-footer">
+                    <span class="cert-tag"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                </div>
             </div>
 
         </div>
@@ -226,9 +412,9 @@
 
                 <h4>Lovely Professional University</h4>
 
-                <p>Phagwara, Punjab</p>
+                <p><i class="fa-solid fa-location-dot"></i> Phagwara, Punjab</p>
 
-                <p>2026 - Present</p>
+                <p class="edu-year"><i class="fa-solid fa-calendar-days"></i> 2026 - Present</p>
 
             </div>
 
@@ -239,9 +425,9 @@
 
                 <h4>Dr. C.V. Raman University</h4>
 
-                <p>Kota Bilaspur, Chhattisgarh</p>
+                <p><i class="fa-solid fa-location-dot"></i> Kota Bilaspur, Chhattisgarh</p>
 
-                <p>2023 - 2026</p>
+                <p class="edu-year"><i class="fa-solid fa-calendar-days"></i> 2023 - 2026</p>
 
             </div>
 
@@ -256,9 +442,9 @@
         <h2 class="section-title">Career Goal</h2>
 
         <p>
-            My goal is to become a skilled Software Developer and
-            build practical, reliable and user-friendly software
-            solutions.
+            My goal is to become a high-performing <strong>Software Developer</strong>,
+            building reliable, scalable, and user-friendly software solutions that solve
+            real-world challenges.
         </p>
 
     </section>
@@ -269,37 +455,97 @@
 
         <h2 class="section-title">Contact Me</h2>
 
-        <div class="contact-box">
+        <div class="contact-container">
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:devendrasinghthakur3738@gmail.com">
-                    devendrasinghthakur3738@gmail.com
-                </a>
-            </p>
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p class="contact-intro">
+                    Have a question, an internship/job opportunity, or want to collaborate?
+                    Feel free to reach out via email, phone, or simply send a message!
+                </p>
 
-            <p>
-                <strong>Phone:</strong>
-                <a href="tel:+918103002844">
-                    +91 8103002844
-                </a>
-            </p>
+                <div class="contact-item">
+                    <strong><i class="fa-solid fa-envelope"></i> Email:</strong>
+                    <a href="mailto:devendrasinghthakur3738@gmail.com">
+                        devendrasinghthakur3738@gmail.com
+                    </a>
+                </div>
 
-            <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/Dev1234484"
-                   target="_blank">
-                    github.com/Dev1234484
-                </a>
-            </p>
+                <div class="contact-item">
+                    <strong><i class="fa-solid fa-phone"></i> Phone:</strong>
+                    <a href="tel:+918103002844">
+                        +91 8103002844
+                    </a>
+                </div>
 
-            <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/"
-                   target="_blank">
-                    LinkedIn Profile
-                </a>
-            </p>
+                <div class="contact-item">
+                    <strong><i class="fa-brands fa-github"></i> GitHub:</strong>
+                    <a href="https://github.com/Dev1234484" target="_blank">
+                        github.com/Dev1234484
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <strong><i class="fa-brands fa-linkedin"></i> LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/" target="_blank">
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <!-- Replace YOUR_FORM_ID with your actual Formspree ID (e.g. https://formspree.io/f/mqkrvbzw) -->
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+                    <div class="form-group">
+                        <label for="name"><i class="fa-regular fa-user"></i> Your Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fa-regular fa-envelope"></i> Your Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fa-regular fa-comment-dots"></i> Your Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn send-btn">
+                        <i class="fa-regular fa-paper-plane"></i> Send Message
+                    </button>
+
+                </form>
+            </div>
 
         </div>
 
@@ -308,81 +554,19 @@
 
     <!-- Footer -->
     <footer>
-
         <p>
-            © 2026 Devendra Singh | Software Developer
+            © 2026 Devendra Singh | Built with passion & dedication
         </p>
-
     </footer>
+
+    <!-- Scroll to Top Floating Button -->
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>
-
-<!-- Contact -->
-<section id="contact" class="section">
-
-    <h2 class="section-title">Contact Me</h2>
-
-    <div class="contact-box">
-
-        <p class="contact-intro">
-            Have a question or want to connect with me?
-            Send me a message using the form below.
-        </p>
-
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-            <label for="name">Your Name</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-            >
-
-            <label for="email">Your Email</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your Gmail"
-                required
-            >
-
-            <label for="phone">Phone Number</label>
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-            >
-
-            <label for="message">Your Message</label>
-            <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Write your message here..."
-                required
-            ></textarea>
-
-            <button type="submit" class="send-btn">
-                Send Message
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-// google 
-
-
-<form action="https://formspree.io/f/{form_id}" method="post">
-  <label for="email">Your Email</label>
-  <input name="Email" id="email" type="email">
-  <button type="submit">Submit</button>
-</form>
+<img src="Devendra.jpeg" alt="Devendra Singh">
