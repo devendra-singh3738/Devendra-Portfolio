@@ -1,109 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="google-site-verification"
-        content="vEaf5KkgnduoOrd77Gryoa770MshATnbbn06zMBymOI">
-
-  <meta name="description"
-        content="Devendra Singh - Computer Science student portfolio">
-
   <title>Devendra Singh | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+  <!-- ================= NAVBAR ================= -->
 
-    <a href="#home" class="brand">
-      <span>DS</span> Devendra Singh
-    </a>
+  <header>
+    <nav class="navbar">
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+      <a href="#home" class="logo">
+        DS<span>.</span>
+      </a>
 
-    <nav id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+      <button class="menu-btn">☰</button>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#coding">Coding Profiles</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
     </nav>
-
   </header>
 
 
-  <main>
+  <!-- ================= HOME ================= -->
 
-    <!-- HOME -->
-    <section id="home" class="hero section">
+  <section id="home" class="hero">
 
-      <div class="hero-text reveal">
+    <div class="hero-container">
 
-        <p class="eyebrow">
-          WELCOME TO MY PORTFOLIO
-        </p>
+      <div class="hero-content">
 
-        <h1>
-          Hello, I'm
-          <span>Devendra Singh</span>
-        </h1>
+        <p class="top-text">HELLO, I'M</p>
+
+        <h1>Devendra Singh</h1>
 
         <h2>
-          Computer Science Student & Aspiring Software Developer
+          Software Developer<span>|</span>
         </h2>
 
-        <p class="hero-copy">
-          I am a B.Tech Computer Science and Engineering student at
-          Lovely Professional University, passionate about programming,
-          problem-solving and building useful software projects.
+        <p class="description">
+          I’m a Computer Science Engineering student at Lovely Professional
+          University, passionate about software development, programming,
+          problem-solving, and building practical projects.
         </p>
 
-        <div class="hero-actions">
+        <div class="buttons">
 
-          <a class="btn primary" href="#projects">
+          <a href="#projects" class="btn">
             View Projects
           </a>
 
-          <a class="btn secondary" href="#contact">
-            Contact Me
-          </a>
-
-          <a class="btn secondary"
-             href="assets/Devendra-Singh-Resume.docx"
-             download>
-            Download Resume ↓
+          <a
+            href="assets/Devendra-Singh-CV.docx"
+            class="btn outline"
+            download>
+            Download Resume
           </a>
 
         </div>
 
+        <div class="social-links">
 
-        <div class="socials">
-
-          <a href="https://github.com/devendra-singh3738"
-             target="_blank">
+          <a
+            href="https://github.com/devendra-singh3738"
+            target="_blank">
             GitHub ↗
           </a>
 
-          <a href="https://in.linkedin.com/in/devendra-singh-8a9a7b329"
-             target="_blank">
+          <a
+            href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/"
+            target="_blank">
             LinkedIn ↗
           </a>
 
-          <a href="mailto:devendrasinghthakur3738@gmail.com">
-            Email ↗
+          <a href="#contact">
+            Contact Me ↗
           </a>
 
         </div>
@@ -111,209 +99,222 @@
       </div>
 
 
-      <!-- PROFILE PHOTO -->
-      <div class="hero-photo reveal">
+      <div class="profile-container">
 
-        <div class="photo-ring">
+        <div class="profile-glow"></div>
 
-          <!-- NEW PROFILE PHOTO -->
-          <img src="assets/profile.png"
-               alt="Devendra Singh profile photo">
-
-        </div>
-
-        <div class="floating-card">
-          <strong>2</strong>
-          <span>Featured Projects</span>
-        </div>
+        <img
+          src="assets/profile.jpeg"
+          alt="Devendra Singh">
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
 
-      <div class="section-heading reveal">
+  <!-- ================= ABOUT ================= -->
 
-        <p class="eyebrow">
-          ABOUT ME
+  <section id="about" class="section">
+
+    <div class="container">
+
+      <p class="section-title">
+        ABOUT ME
+      </p>
+
+      <h2>Who I Am</h2>
+
+      <div class="about-content">
+
+        <p>
+          Hi, I’m Devendra Singh, a Computer Science Engineering student at
+          Lovely Professional University, pursuing a B.Tech in Computer
+          Science and Engineering through lateral entry.
         </p>
 
-        <h2>
-          Building my skills, one project at a time.
-        </h2>
-
-      </div>
-
-
-      <div class="about-grid">
-
-        <div class="glass-card about-card reveal">
-
-          <p>
-            My name is <strong>Devendra Singh</strong>.
-            I am currently pursuing a
-            <strong>Bachelor of Technology in Computer Science
-            and Engineering</strong> at Lovely Professional University.
-          </p>
-
-          <p>
-            I completed my Diploma in Computer Science and Engineering
-            from Dr. C. V. Raman University.
-            I enjoy learning programming concepts, solving problems
-            and creating practical applications.
-          </p>
-
-          <p>
-            My current technical focus includes C++, Java, HTML, CSS,
-            MySQL and developer tools such as Git, GitHub and VS Code.
-          </p>
-
-        </div>
-
-
-        <div class="stats-grid reveal">
-
-          <div class="stat-card">
-            <span>01</span>
-            <strong>C++</strong>
-            <small>Programming</small>
-          </div>
-
-          <div class="stat-card">
-            <span>02</span>
-            <strong>Java</strong>
-            <small>Programming</small>
-          </div>
-
-          <div class="stat-card">
-            <span>03</span>
-            <strong>MySQL</strong>
-            <small>Database</small>
-          </div>
-
-          <div class="stat-card">
-            <span>04</span>
-            <strong>GitHub</strong>
-            <small>Version Control</small>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-
-      <div class="section-heading reveal">
-
-        <p class="eyebrow">
-          MY SKILLS
+        <p>
+          I’m passionate about software development and enjoy building
+          projects while continuously improving my programming and
+          problem-solving skills. I have experience with Java, C++,
+          Data Structures &amp; Algorithms, SQL, HTML, CSS, and basic
+          backend development.
         </p>
 
-        <h2>
-          Tools & technologies I work with.
-        </h2>
+        <p>
+          Currently, I’m focused on strengthening my Java and DSA skills
+          and preparing for software engineering opportunities.
+        </p>
+
+        <p>
+          I enjoy learning new technologies, working on real-world
+          projects, and turning ideas into practical solutions. My goal
+          is to continuously grow as a developer and build a strong
+          career in software engineering.
+        </p>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills" class="section dark">
+
+    <div class="container">
+
+      <p class="section-title">
+        MY SKILLS
+      </p>
+
+      <h2>Technologies I Work With</h2>
 
       <div class="skills-grid">
 
-        <div class="glass-card skill-card reveal">
-
-          <div class="icon">⌘</div>
-
-          <h3>Languages</h3>
-
-          <div class="tags">
-            <span>C++</span>
-            <span>Java</span>
-          </div>
-
+        <div class="skill-card">
+          <h3>Java</h3>
+          <p>Core Programming</p>
         </div>
 
-
-        <div class="glass-card skill-card reveal">
-
-          <div class="icon">&lt;/&gt;</div>
-
-          <h3>Web Technologies</h3>
-
-          <div class="tags">
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
+        <div class="skill-card">
+          <h3>C++</h3>
+          <p>Programming &amp; DSA</p>
         </div>
 
-
-        <div class="glass-card skill-card reveal">
-
-          <div class="icon">DB</div>
-
-          <h3>Tools & Platforms</h3>
-
-          <div class="tags">
-            <span>MySQL</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>VS Code</span>
-          </div>
-
+        <div class="skill-card">
+          <h3>Data Structures</h3>
+          <p>Algorithms &amp; Problem Solving</p>
         </div>
 
+        <div class="skill-card">
+          <h3>HTML &amp; CSS</h3>
+          <p>Web Development</p>
+        </div>
 
-        <div class="glass-card skill-card reveal">
+        <div class="skill-card">
+          <h3>MySQL</h3>
+          <p>Database</p>
+        </div>
 
-          <div class="icon">★</div>
+        <div class="skill-card">
+          <h3>Git &amp; GitHub</h3>
+          <p>Version Control</p>
+        </div>
 
-          <h3>Soft Skills</h3>
+        <div class="skill-card">
+          <h3>VS Code</h3>
+          <p>Development Tool</p>
+        </div>
 
-          <div class="tags">
-            <span>Problem-Solving</span>
-            <span>Team Player</span>
-            <span>Communication</span>
-            <span>Quick Learner</span>
-          </div>
+        <div class="skill-card">
+          <h3>Problem Solving</h3>
+          <p>Logical Thinking</p>
+        </div>
 
+        <div class="skill-card">
+          <h3>Communication</h3>
+          <p>Effective Communication</p>
         </div>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
 
-      <div class="section-heading reveal">
+  <!-- ================= EXPERIENCE ================= -->
 
-        <p class="eyebrow">
-          PROJECTS
-        </p>
+  <section id="experience" class="section">
 
-        <h2>
-          Things I've built.
-        </h2>
+    <div class="container">
+
+      <p class="section-title">
+        EXPERIENCE
+      </p>
+
+      <h2>Professional Experience</h2>
+
+      <div class="experience-card">
+
+        <div>
+
+          <span class="experience-duration">
+            2 YEARS EXPERIENCE
+          </span>
+
+          <h3>
+            Computer Operator / Data Entry Operator
+          </h3>
+
+          <p class="experience-place">
+            District Cooperative Banks &amp; Paddy Procurement Societies
+            <br>
+            Bilaspur, Chhattisgarh
+          </p>
+
+        </div>
+
+        <ul>
+
+          <li>
+            Handled computer-based data entry and documentation work.
+          </li>
+
+          <li>
+            Maintained and updated records accurately.
+          </li>
+
+          <li>
+            Managed data related to banking and paddy procurement operations.
+          </li>
+
+          <li>
+            Prepared and maintained digital records and reports.
+          </li>
+
+          <li>
+            Performed data verification and supported daily office operations.
+          </li>
+
+        </ul>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects" class="section dark">
+
+    <div class="container">
+
+      <p class="section-title">
+        PROJECTS
+      </p>
+
+      <h2>What I've Built</h2>
 
       <div class="projects-grid">
 
-        <article class="project-card reveal">
 
-          <div class="project-top">
-            <span class="project-number">01</span>
-            <span class="project-label">
-              DIPLOMA PROJECT
-            </span>
+        <!-- PROJECT 01 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            01
           </div>
 
           <h3>
@@ -321,33 +322,29 @@
           </h3>
 
           <p>
-            Developed a hostel management system with Admin and
-            Warden modules, database management and secure password
-            authentication.
+            Developed a hostel management system with Admin and Warden
+            modules. Used MySQL for database management and implemented
+            secure password authentication.
           </p>
 
-          <ul>
-            <li>Admin & Warden modules</li>
-            <li>MySQL database management</li>
-            <li>bcrypt password authentication</li>
-            <li>Hostel records and user access</li>
-          </ul>
+          <div class="tags">
 
-          <div class="project-tech">
             <span>MySQL</span>
-            <span>bcrypt</span>
+            <span>Authentication</span>
+            <span>Management System</span>
+
           </div>
 
-        </article>
+        </div>
 
 
-        <article class="project-card reveal">
 
-          <div class="project-top">
-            <span class="project-number">02</span>
-            <span class="project-label">
-              JAVA PROJECT
-            </span>
+        <!-- PROJECT 02 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            02
           </div>
 
           <h3>
@@ -355,324 +352,395 @@
           </h3>
 
           <p>
-            A basic calculator application developed in Java to
-            practice core programming concepts and user input.
+            Built a basic calculator application using Java with addition,
+            subtraction, multiplication and division operations.
           </p>
 
-          <ul>
-            <li>Addition & subtraction</li>
-            <li>Multiplication & division</li>
-            <li>Variables and operators</li>
-            <li>Conditions and user input</li>
-          </ul>
+          <div class="tags">
 
-          <div class="project-tech">
             <span>Java</span>
-            <span>Core Concepts</span>
+            <span>Logic</span>
+            <span>Core Java</span>
+
           </div>
 
-        </article>
+        </div>
+
+
+
+        <!-- PROJECT 03 -->
+
+        <div class="project-card">
+
+          <div class="project-number">
+            03
+          </div>
+
+          <h3>
+            Crop Recommendation System
+          </h3>
+
+          <p>
+            A project focused on providing crop recommendations based on
+            relevant agricultural information.
+          </p>
+
+          <div class="tags">
+
+            <span>Project</span>
+            <span>Technology</span>
+            <span>Problem Solving</span>
+
+          </div>
+
+        </div>
+
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- CERTIFICATES -->
-    <section id="certificates" class="section">
 
-      <div class="section-heading reveal">
+  <!-- ================= CODING PROFILES ================= -->
 
-        <p class="eyebrow">
-          CERTIFICATES
-        </p>
+  <section id="coding" class="section">
 
-        <h2>
-          Learning beyond the classroom.
-        </h2>
+    <div class="container">
+
+      <p class="section-title">
+        CODING PROFILES
+      </p>
+
+      <h2>Find Me Online</h2>
+
+      <div class="coding-grid">
+
+
+        <div class="coding-card">
+
+          <div>
+
+            <h3>
+              GitHub
+            </h3>
+
+            <p>
+              My projects, practice code and development work.
+            </p>
+
+          </div>
+
+          <a
+            href="https://github.com/devendra-singh3738"
+            target="_blank"
+            class="btn">
+            Visit GitHub ↗
+          </a>
+
+        </div>
+
+
+
+        <div class="coding-card">
+
+          <div>
+
+            <h3>
+              LinkedIn
+            </h3>
+
+            <p>
+              Connect with me professionally.
+            </p>
+
+          </div>
+
+          <a
+            href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/"
+            target="_blank"
+            class="btn">
+            Visit LinkedIn ↗
+          </a>
+
+        </div>
+
 
       </div>
 
+    </div>
 
-      <div class="cert-grid">
-
-
-        <!-- CERTIFICATE 1 -->
-        <article class="cert-card reveal">
-
-          <button class="cert-image-btn"
-                  data-image="assets/certificate-financial-literacy.jpg"
-                  data-title="Financial Literacy">
-
-            <img src="assets/certificate-financial-literacy.jpg"
-                 alt="Financial Literacy certificate">
-
-            <span>
-              View certificate
-            </span>
-
-          </button>
+  </section>
 
 
-          <div class="cert-content">
+
+  <!-- ================= CERTIFICATES ================= -->
+
+  <section id="certificates" class="section dark">
+
+    <div class="container">
+
+      <p class="section-title">
+        CERTIFICATES
+      </p>
+
+      <h2>Achievements &amp; Learning</h2>
+
+
+      <div class="certificate-grid">
+
+
+        <!-- ================= CERTIFICATE 01 ================= -->
+
+        <div class="certificate-card">
+
+          <a
+            href="assets/financial-literacy.jpeg"
+            target="_blank">
+
+            <img
+              src="assets/financial-literacy.jpeg"
+              alt="Financial Literacy Certificate">
+
+          </a>
+
+          <div class="certificate-info">
 
             <h3>
               Financial Literacy
             </h3>
 
             <p>
-              Passport to Earning · YuWaah / UNICEF
+              Passport to Earning · UNICEF / YuWaah
             </p>
 
-            <small>
-              Completed April 26, 2026
-            </small>
+            <a
+              href="assets/financial-literacy.jpeg"
+              target="_blank"
+              class="certificate-link">
+              View Certificate ↗
+            </a>
 
           </div>
 
-        </article>
+        </div>
 
 
-        <!-- CERTIFICATE 2 -->
-        <article class="cert-card reveal">
 
-          <button class="cert-image-btn"
-                  data-image="assets/certificate-empowerai.jpg"
-                  data-title="EmpowerAI Lead-Up: Skills and Innovation 2026">
+        <!-- ================= CERTIFICATE 02 ================= -->
 
-            <img src="assets/certificate-empowerai.jpg"
-                 alt="EmpowerAI certificate">
+        <div class="certificate-card">
 
-            <span>
-              View certificate
-            </span>
+          <a
+            href="assets/empowerai.jpeg"
+            target="_blank">
 
-          </button>
-
-
-          <div class="cert-content">
-
-            <h3>
-              EmpowerAI Lead-Up: Skills and Innovation 2026
-            </h3>
-
-            <p>
-              AI for Atmanirbhar Bharat · India AI Impact Summit
-              Lead-Up Event
-            </p>
-
-            <small>
-              CVRU · February 11, 2026
-            </small>
-
-          </div>
-
-        </article>
-
-
-        <!-- CERTIFICATE 3 -->
-        <article class="cert-card reveal">
-
-          <a class="cert-image-btn link-button"
-             href="assets/certificate-ip-utsav.pdf"
-             target="_blank">
-
-            <img src="assets/certificate-ip-utsav-preview.png"
-                 alt="Intellectual Property UTSAV certificate">
-
-            <span>
-              Open certificate PDF ↗
-            </span>
+            <img
+              src="assets/empowerai.jpeg"
+              alt="EmpowerAI Lead-Up Certificate">
 
           </a>
 
-
-          <div class="cert-content">
+          <div class="certificate-info">
 
             <h3>
-              Intellectual Property UTSAV
+              EmpowerAI Lead-Up
             </h3>
 
             <p>
-              Certificate of Participation · IP and music:
-              Feel the beat of IP
+              Skills and Innovation 2026 · AI Impact Summit Lead-Up Event
             </p>
 
-            <small>
-              AICTE & Ministry of Education's Innovation Cell ·
-              April 21–26, 2025
-            </small>
+            <a
+              href="assets/empowerai.jpeg"
+              target="_blank"
+              class="certificate-link">
+              View Certificate ↗
+            </a>
 
           </div>
 
-        </article>
+        </div>
+
+
+
+        <!-- ================= CERTIFICATE 03 ================= -->
+
+        <div class="certificate-card">
+
+          <a
+            href="assets/ip-utsav-certificate.pdf"
+            target="_blank">
+
+            <div class="certificate-pdf">
+              PDF
+            </div>
+
+          </a>
+
+          <div class="certificate-info">
+
+            <h3>
+              Intellectual Property Utsav
+            </h3>
+
+            <p>
+              Masterclass Series · AICTE &amp; Ministry of Education
+              Innovation Cell
+            </p>
+
+            <a
+              href="assets/ip-utsav-certificate.pdf"
+              target="_blank"
+              class="certificate-link">
+              View Certificate ↗
+            </a>
+
+          </div>
+
+        </div>
+
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
 
-      <div class="section-heading reveal">
+  <!-- ================= EDUCATION ================= -->
 
-        <p class="eyebrow">
-          EDUCATION
-        </p>
+  <section id="education" class="section">
 
-        <h2>
-          My academic journey.
-        </h2>
+    <div class="container">
 
-      </div>
+      <p class="section-title">
+        EDUCATION
+      </p>
 
+      <h2>Academic Journey</h2>
 
       <div class="timeline">
 
 
-        <div class="timeline-item reveal">
+        <!-- LPU -->
 
-          <div class="timeline-dot"></div>
+        <div class="timeline-item">
 
-          <div class="timeline-date">
-            Aug 2026 – Present
-          </div>
+          <span>
+            2026 — PRESENT
+          </span>
 
-          <div class="timeline-card">
-
-            <h3>
-              Lovely Professional University
-            </h3>
-
-            <p>
-              Bachelor of Technology — Computer Science and Engineering
-            </p>
-
-            <span>
-              Phagwara, Punjab
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="timeline-item reveal">
-
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-date">
-            Sep 2023 – Jul 2026
-          </div>
-
-          <div class="timeline-card">
-
-            <h3>
-              Dr. C. V. Raman University
-            </h3>
-
-            <p>
-              Diploma — Computer Science and Engineering
-            </p>
-
-            <span>
-              Percentage: 78.53% · Kota, Bilaspur, Chhattisgarh
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-
-      <div class="contact-box reveal">
-
-        <div>
-
-          <p class="eyebrow">
-            GET IN TOUCH
-          </p>
-
-          <h2>
-            Let's connect.
-          </h2>
+          <h3>
+            Lovely Professional University
+          </h3>
 
           <p>
-            Have a project, internship opportunity or simply want
-            to connect? Feel free to reach out.
+            Bachelor of Technology — Computer Science and Engineering
+            <br>
+            Phagwara, Punjab
           </p>
 
         </div>
 
 
-        <div class="contact-details">
 
-          <a href="mailto:devendrasinghthakur3738@gmail.com">
-            ✉ devendrasinghthakur3738@gmail.com
-          </a>
+        <!-- DIPLOMA -->
 
-          <a href="tel:+918103002844">
-            ☎ +91 8103002844
-          </a>
+        <div class="timeline-item">
 
-          <a href="https://github.com/devendra-singh3738"
-             target="_blank">
-            GitHub ↗
-          </a>
+          <span>
+            2023 — 2026
+          </span>
 
-          <a href="https://in.linkedin.com/in/devendra-singh-8a9a7b329"
-             target="_blank">
-            LinkedIn ↗
-          </a>
+          <h3>
+            Dr. C. V. Raman University
+          </h3>
+
+          <p>
+            Diploma — Computer Science and Engineering
+            <br>
+            Kota, Bilaspur, Chhattisgarh
+            <br>
+            Percentage: 78.53%
+          </p>
 
         </div>
 
+
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact" class="section dark">
+
+    <div class="container contact-box">
+
+      <p class="section-title">
+        CONTACT
+      </p>
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Interested in collaborating, discussing projects,
+        or connecting professionally?
+      </p>
+
+      <div class="contact-links">
+
+        <a href="tel:+918103002844">
+          📞 +91 81030 02844
+        </a>
+
+        <a href="mailto:devendrasinghthakur3738@gmail.com">
+          📧 devendrasinghthakur3738@gmail.com
+        </a>
+
+        <a
+          href="https://github.com/devendra-singh3738"
+          target="_blank">
+          💻 GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/devendra-singh-8a9a7b329/"
+          target="_blank">
+          💼 LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
-    <p>
-      © <span id="year"></span> Devendra Singh.
-      Built with HTML, CSS & JavaScript.
-    </p>
+    © 2026 Devendra Singh ·
+    Built with HTML, CSS &amp; JavaScript
 
   </footer>
 
-
-  <!-- CERTIFICATE MODAL -->
-  <div class="modal" id="certModal">
-
-    <button class="modal-close" id="modalClose">
-      ×
-    </button>
-
-    <img id="modalImage" src="" alt="">
-
-    <p id="modalTitle"></p>
-
-  </div>
-
-
-  <!-- BACK TO TOP -->
-  <button class="top-btn" id="topBtn">
-    ↑
-  </button>
 
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
